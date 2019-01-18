@@ -1,0 +1,35 @@
+<div>
+  <br>
+  <mat-card>
+    <section class="mat-typography">
+      <h3>Create New Sale Order</h3>
+    </section>
+    <mat-divider></mat-divider>
+    <br>
+    <form [formGroup]="creatForm" class="create-form">
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Sale Order Title" formControlName="title" #title>
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Customer" formControlName="customer" #customer>
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Sales Person" formControlName="salesPerson" #salesPerson>
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Total" formControlName="total" #total>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Invoice Status" formControlName="invoiceStatus" #invoiceStatus>
+          <mat-option value="Quotation">Quotation</mat-option>
+          <mat-option value="QuotationSent">Quotation Sent</mat-option>
+          <mat-option value="SaleOrder">Sale Order</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <br><br>
+      <button mat-raised-button color="accent" routerLink="/list">Back</button>
+      <button type="submit" (click)= "addSaleOrder(title.value, customer.value, salesPerson.value, total.value, invoiceStatus.value)" [disabled]="creatForm.pristine || creatForm.invalid" mat-raised-button color="primary">Create</button>
+    </form>
+  </mat-card>
+</div>
