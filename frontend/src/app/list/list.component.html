@@ -27,8 +27,8 @@
         <td mat-cell *matCellDef="let element">{{ element.invoiceStatus }}</td>
       </ng-container>
       <ng-container matColumnDef=actions>
-        <th mat-header-cell *matHeaderCellDef class="mat-column-right">Actions</th>
-        <td mat-cell *matCellDef="let element" class="mat-column-right">
+        <th mat-header-cell *matHeaderCellDef class="so_content_right">Actions</th>
+        <td mat-cell *matCellDef="let element">
           <button mat-button color="primary" (click)="editSaleOrder(element._id)">Edit</button>
           <button mat-button color="warn" (click)="deleteSaleOrder(element._id) ">Delete</button>
         </td>

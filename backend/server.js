@@ -60,7 +60,7 @@ router.route('/sale_orders/update/:id').post((req, res)=> {
             saleOrder.customer = req.body.customer;
             saleOrder.salesPerson = req.body.salesPerson;
             saleOrder.total = req.body.total;
-            saleOrder.invoiceStatus = req.total.invoiceStatus;
+            saleOrder.invoiceStatus = req.body.invoiceStatus;
             saleOrder.save().then(saleOrder => {
                 res.json('Updated Sale Order!');
             }).catch(err => {

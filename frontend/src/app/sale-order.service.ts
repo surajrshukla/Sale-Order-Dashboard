@@ -13,7 +13,7 @@ export class SaleOrderService {
     return this.http.get(`${this.uri}`);
   }
 
-  getSsaleOrderById(id) {
+  getsaleOrderById(id) {
     return this.http.get(`${this.uri}/${id}`);
   }
 
